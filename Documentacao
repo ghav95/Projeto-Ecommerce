@@ -1,0 +1,57 @@
+# Projeto Ecommerce
+
+### Perfil
+
+```java
+public class Pessoa {
+	List<Pessoa> listPessoa = new ArrayList<>();
+	int idPessoa;
+	string nome;
+	string login;
+	string senha;
+	string endereco;
+	string email;
+	int isAdministrador;
+}
+```
+
+### //public interface IAdministrador ????????
+
+### Cliente
+
+- ClienteFisico
+    - String cpf;
+- ClienteJurídico
+    - String cnpj;
+    - String nomeFantasia;
+
+### Produto
+
+- List<Produto> listProduto = new ArrayList<>();
+- int idProduto;
+- string nome
+- double preco;
+- EnumCategoria categoria;
+- string marca;
+
+```java
+public class Livro extends Produto{
+	String editora;
+	int numeroDePaginas;
+	int anoLancamento;
+}
+```
+
+```java
+public class Informatica extends Produto{
+	String modelo;
+	boolean isImportado;
+	boolean isSoftware;
+}
+```
+
+```java
+public class Mercado extends Produto{
+	double peso;
+}
+```
