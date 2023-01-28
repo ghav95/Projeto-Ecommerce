@@ -9,13 +9,13 @@ import java.util.List;
 @Getter
 @Setter
 public class Pessoa {
-    List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
-    int idPessoa;
-    String nome;
-    String login;
-    String senha;
-    String endereco;
-    String email;
+    private List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
+    private int idPessoa;
+    private String nome;
+    private String login;
+    private String senha;
+    private String endereco;
+    private String email;
 
 //    int isAdministrador;
 }

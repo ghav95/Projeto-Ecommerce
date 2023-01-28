@@ -4,8 +4,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Livro extends Produto{
-    String editora;
-    int numeroDePaginas;
-
-    int anoLancamento;
+    private String editora;
+    private int numeroDePaginas;
+    private int anoLancamento;
 }

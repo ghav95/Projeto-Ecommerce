@@ -6,8 +6,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ClientePessoaJuridica extends Pessoa{
-
-    String cnpj;
-    String nomeFantasia;
+    private String cnpj;
+    private String nomeFantasia;
 
 }

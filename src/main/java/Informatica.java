@@ -4,8 +4,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Informatica extends Produto{
-
-    String modelo;
-    boolean isImportado;
-    boolean isSoftware;
+    private String modelo;
+    private boolean isImportado;
+    private boolean isSoftware;
 }
