@@ -7,14 +7,11 @@ import java.util.List;
 @Setter
 @Getter
 public class Produto {
-
-    List<Produto> listaProdutos = new ArrayList<Produto>();
-    int idProduto;
-    String nome;
-    double preco;
-
-    Enum<Categoria> categoriaEnum;
-
-    String marca;
+    private List<Produto> listaProdutos = new ArrayList<Produto>();
+    private int idProduto;
+    private String nome;
+    private double preco;
+    private Enum<Categoria> categoriaEnum;
+    private String marca;
 
 }
