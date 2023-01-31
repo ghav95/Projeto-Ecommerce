@@ -1,4 +1,4 @@
-package entidades;
+package models.pessoas;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -25,9 +25,9 @@ public class Pessoa {
     - String cnpj;
     - String nomeFantasia;
 
-### Produto
+### models.produtos.Produto
 
-- List<Produto> listProduto = new ArrayList<>();
+- List<models.produtos.Produto> listProduto = new ArrayList<>();
 - int idProduto;
 - string nome
 - double preco;
@@ -35,7 +35,7 @@ public class Pessoa {
 - string marca;
 
 ```java
-public class Livro extends Produto{
+public class models.produtos.Livro extends models.produtos.Produto{
 	String editora;
 	int numeroDePaginas;
 	int anoLancamento;
@@ -43,7 +43,7 @@ public class Livro extends Produto{
 ```
 
 ```java
-public class Informatica extends Produto{
+public class models.produtos.Informatica extends models.produtos.Produto{
 	String modelo;
 	boolean isImportado;
 	boolean isSoftware;
@@ -51,7 +51,7 @@ public class Informatica extends Produto{
 ```
 
 ```java
-public class Mercado extends Produto{
+public class models.produtos.Mercado extends models.produtos.Produto{
 	double peso;
 }
 ```

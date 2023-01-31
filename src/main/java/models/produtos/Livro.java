@@ -1,3 +1,5 @@
+package models.produtos;
+
 import lombok.Getter;
 import lombok.Setter;
 
