@@ -1,16 +1,18 @@
 package dao;
 
-import models.produtos.Produto;
+import lombok.Getter;
+import models.usuarios.produtos.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProdutoDao {
+//@Getter
+//public class ProdutoDao {
+//
+//    private static List<Produto> produtos = new ArrayList<>();
+//
+//    private void adicionarProduto(Produto produto){
+//        this.produtos.add(produto);
+//    }
 
-    private static List<Produto> produtos = new ArrayList<>();
-
-    private boolean salvarProduto(Produto produto){
-        return produtos.add(produto);
-    }
-
-}
+//}/
