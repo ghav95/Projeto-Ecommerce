@@ -1,7 +1,5 @@
 package models.usuarios;
 
-import models.usuarios.*;
-
 import java.util.Scanner;
 
 public class Login {
@@ -15,7 +13,7 @@ public class Login {
 
         if (usuario == null){
             System.out.println("Login não cadastrado!");
-               Inicio.iniciar();
+               InicioCadastroPerfil.iniciar();
         }
         else
         {
@@ -46,7 +44,7 @@ public class Login {
                 System.out.println("Senha inválida!");
                 tentativas++;
             }
-            System.out.println("Número de tentativas excedido. Finalizando sistema.");
+            System.out.println("Finalizando sistema.");
             System.exit(0);
         }
     }

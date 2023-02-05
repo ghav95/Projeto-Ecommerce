@@ -40,6 +40,7 @@ public class CadastrarClienteFisico {
           new ClientePessoaFisica(nome, login, senha, email, cpfcnpj);
 
           System.out.println("Cliente cadastrado com sucesso!");
+
           InicioCliente.iniciar();
 
      }

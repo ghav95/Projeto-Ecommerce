@@ -38,7 +38,9 @@ public class CadastrarClienteJuridico {
         endereco = sc.next();
 
         new ClientePessoaJuridica(nome, login, senha, email, cpfcnpj);
-        InicioCliente.iniciar();
 
+        System.out.println("Cliente cadastrado com sucesso!");
+
+        InicioCliente.iniciar();
     }
 }

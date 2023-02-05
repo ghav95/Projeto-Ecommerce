@@ -1,9 +1,5 @@
 package models.usuarios;
 
-import lombok.Getter;
-import lombok.Setter;
-
-
 public interface Pessoa<T>{
      int id = 0;
      String nome = null;

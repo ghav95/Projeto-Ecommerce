@@ -2,7 +2,7 @@ package models.usuarios;
 
 import java.util.Scanner;
 
-public class Inicio {
+public class InicioCadastroPerfil {
 
     public static void iniciar(){
         boolean continuar = true;
