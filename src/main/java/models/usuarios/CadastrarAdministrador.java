@@ -1,6 +1,7 @@
 package models.usuarios;
 
 import models.usuarios.validadores.ValidarCNPJ;
+import models.usuarios.validadores.ValidarCPF;
 
 import java.util.Scanner;
 
@@ -18,10 +19,10 @@ public class CadastrarAdministrador {
         System.out.print("Digite o nome: ");
         nome = sc.next();
 
-        System.out.print("Digite o cnpj: ");
+        System.out.print("Digite o cpf: ");
         cpfcnpj = sc.next();
-        while (!ValidarCNPJ.isValido(cpfcnpj)) {
-            System.out.print("CNPJ inválido! Digite novamente: ");
+        while (!ValidarCPF.isValido(cpfcnpj)) {
+            System.out.print("CPF inválido! Digite novamente: ");
             cpfcnpj = sc.next();
         }
 

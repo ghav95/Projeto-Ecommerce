@@ -27,6 +27,7 @@ public class Produto implements Comparable<Produto>{
         this.categoria = categoria;
         this.marca = marca;
         this.idProduto = sequencia++;
+        listaProdutos.add(this);
     }
 
     @Override

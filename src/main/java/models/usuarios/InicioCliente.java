@@ -1,6 +1,7 @@
 package models.usuarios;
 
 import models.usuarios.Pessoa;
+import models.usuarios.produtos.Produto;
 
 import java.util.Scanner;
 
@@ -30,10 +31,11 @@ public class InicioCliente {
 
     private static boolean navegacao(int escolhaMenu){
         switch (escolhaMenu) {
-           /* case 1 -> CadastrarClienteFisico.cadastrar();
-            case 2 -> InicioCliente.iniciar();
-            case 3 -> InicioAdministrador.iniciar();
-            case 4 -> Login.login();*/
+            case 1 -> Produto.listAll();
+            //case 2 -> InicioCliente.iniciar();
+            //case 3 -> InicioAdministrador.iniciar();
+            //case 4 -> Login.login();
+            //case 5 -> Login.login();
             case 6 -> { return false; }
         }
         return true;
