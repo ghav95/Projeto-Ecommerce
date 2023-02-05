@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Cliente implements Pessoa<Cliente>{
     public static List<Cliente> listCliente = new ArrayList<>();
-    int id = 0;
+    int id;
     String nome = "";
     String login= "";
     String senha = "";

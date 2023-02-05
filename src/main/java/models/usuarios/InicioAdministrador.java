@@ -5,6 +5,7 @@ import models.usuarios.produtos.Produto;
 import java.util.Scanner;
 
 public class InicioAdministrador {
+
     public static void iniciar(){
         boolean continuar = true;
         Scanner sc = new Scanner(System.in);
@@ -33,7 +34,10 @@ public class InicioAdministrador {
             case 2 -> Produto.listAll();
             case 3 -> Produto.editar();
             case 4 -> Produto.remove();
-            case 5 -> { return false; }
+            case 5 -> {
+                Login.login();
+                return false;
+            }
         }
         return true;
     }

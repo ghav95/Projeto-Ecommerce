@@ -32,7 +32,9 @@ public class Inicio {
             case 2 -> CadastrarClienteJuridico.cadastrar();
             case 3 -> CadastrarAdministrador.cadastrar();
             case 4 -> Login.login();
-            case 5 -> { return false; }
+            case 5 -> {
+                System.out.println("Finalizando sistema.");
+                System.exit(0); return false; }
         }
         return true;
     }
