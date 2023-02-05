@@ -3,19 +3,19 @@ package models.usuarios;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
 
-@Getter
-@Setter
-public abstract class Pessoa {
-    private List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
-    private int idPessoa;
-    private String nome;
-    private String login;
-    private String senha;
-    private String endereco;
-    private String email;
+public interface Pessoa<T>{
+     int id = 0;
+     String nome = null;
+     String login= null;
+     String senha = null;
+     String email = null;
+     String cpfcnpj = null;
 
-//    int isAdministrador;
+    T getById(int id);
+
+    T getByCpf(String cpfcnpj);
+
+    T getByLogin(String login);
+
 }

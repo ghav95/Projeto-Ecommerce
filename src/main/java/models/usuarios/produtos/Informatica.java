@@ -5,8 +5,8 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class Informatica extends Produto<Informatica.Categoria>{
-    public Informatica( String nome, Double preco, Categoria categoria, String marca) {
+public class Informatica extends Produto {
+    public Informatica( String nome, Double preco, String categoria, String marca) {
         super( nome, preco, categoria, marca);
     }
 

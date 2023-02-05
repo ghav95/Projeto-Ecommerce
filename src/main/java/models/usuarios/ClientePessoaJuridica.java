@@ -3,10 +3,8 @@ package models.usuarios;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
-@Getter
 public class ClientePessoaJuridica extends Cliente{
-    private String cnpj;
-    private String nomeFantasia;
-
+    public ClientePessoaJuridica(String nome, String login, String senha, String email, String cpfcnpj) {
+        super(nome, login, senha, email, cpfcnpj);
+    }
 }

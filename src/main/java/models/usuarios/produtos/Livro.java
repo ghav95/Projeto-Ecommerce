@@ -10,7 +10,7 @@ public class Livro extends Produto{
     private int numeroDePaginas;
     private int anoLancamento;
 
-    public Livro(String nome, Double preco, Enum categoria, String marca) {
+    public Livro(String nome, Double preco, String categoria, String marca) {
         super(nome, preco, categoria, marca);
 
     }

@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Mercado extends Produto{
     private double peso;
 
-    public Mercado(String nome, Double preco, Enum categoria, String marca) {
+    public Mercado(String nome, Double preco, String categoria, String marca) {
         super( nome, preco, categoria, marca);
     }
 }
