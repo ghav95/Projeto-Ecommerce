@@ -20,9 +20,16 @@ public class CadastrarClienteFisico {
 
           System.out.print("Digite o cpf: ");
           cpfcnpj = sc.next();
+          int tentativas = 0;
           while (!ValidarCPF.isValido(cpfcnpj)) {
-               System.out.print("CPF inválido! Digite novamente: ");
+               System.out.print("\033[1;31mCPF inválido!\033[m Digite novamente: ");
                cpfcnpj = sc.next();
+               if (tentativas >= 3){
+                    InicioCadastroPerfil.iniciar();
+                    break;
+               }
+               tentativas++;
+
           }
 
           System.out.print("Digite o login: ");
@@ -39,8 +46,7 @@ public class CadastrarClienteFisico {
 
           new ClientePessoaFisica(nome, login, senha, email, cpfcnpj);
 
-          System.out.println("Cliente cadastrado com sucesso!");
-
+          System.out.println("\033[32mCliente cadastrado com sucesso!\033[m");
           InicioCliente.iniciar();
 
      }
