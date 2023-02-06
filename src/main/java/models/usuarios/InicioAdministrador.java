@@ -34,10 +34,8 @@ public class InicioAdministrador {
             case 2 -> Produto.listAll();
             case 3 -> Produto.editar();
             case 4 -> Produto.remove();
-            case 5 -> {
-                Login.login();
-                return false;
-            }
+            case 5 ->  {System.out.println("\033[33mSaindo...\033[m");
+            System.exit(0); return false;}
         }
         return true;
     }

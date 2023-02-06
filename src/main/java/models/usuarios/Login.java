@@ -12,7 +12,7 @@ public class Login {
         usuario = isCadastrado(sc.next());
 
         if (usuario == null){
-            System.out.println("Login não cadastrado!");
+            System.out.println("\033[1;31mLogin não cadastrado!\033[m");
                InicioCadastroPerfil.iniciar();
         }
         else
@@ -35,16 +35,16 @@ public class Login {
                 if (isCliente(usuario)) {
                     Cliente cliente = (Cliente) usuario;
                     if(cliente.getSenha().equals(senha)) {
-                        System.out.println("Bem vindo, cliente " + cliente.nome + ".");
+                        System.out.println("\033[32mBem vindo, cliente " + cliente.nome + ".\033[m");
                         InicioAdministrador.iniciar();
                         tentativas = 3;
                         break;
                     }
                 }
-                System.out.println("Senha inválida!");
+                System.out.println("\033[1;31mSenha inválida!\033[m");
                 tentativas++;
             }
-            System.out.println("Finalizando sistema.");
+            System.out.println("\033[33mSaindo...\033[m");
             System.exit(0);
         }
     }

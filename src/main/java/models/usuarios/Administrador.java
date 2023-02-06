@@ -13,11 +13,11 @@ public class Administrador implements Pessoa<Administrador>{
 
     public static List<Administrador> listAdministrador = new ArrayList<>();
     int id = 0;
-    String nome = "";
-    String login= "";
-    String senha = "";
-    String email = "";
-    String cpfcnpj = "";
+    String nome;
+    String login;
+    String senha;
+    String email;
+    String cpfcnpj;
 
     public Administrador() {
     }
