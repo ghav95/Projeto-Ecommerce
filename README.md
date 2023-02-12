@@ -1,4 +1,4 @@
-<h1 align="center"> Projeto Ecommerce - Módulo 03 </h1>
+<h1 align="center"> Módulo 03 - Projeto Ecommerce </h1>
 <br />
 <h1 align="center">Americanas Polo-Tech Backend Java</h1>
 
@@ -24,12 +24,9 @@
 </p>
 
 <h2 align="center">
-    A trilha que escolhi foi a de BACK-END na linguagem JAVA!
+    A trilha que escolhi foi a de Back-end Java.
 </h2>
-<p align="center">
-    Nesta trilha, vou aprender a integrar os bancos de dados e as
-    informações do navegador por meio de linguagen de programação Java.
-</p>
+
 <h3>Módulos:</h3>
 
 <ul>
