@@ -17,6 +17,8 @@ public class Produto implements Comparable<Produto>{
     private String categoria;
     private String marca;
 
+    private static final StringBuilder stringBuilder = new StringBuilder();
+
     private static List<Produto> listaProdutos = new ArrayList<>();
 
     public Produto(String nome, Double preco, String categoria, String marca) {
@@ -45,7 +47,7 @@ public class Produto implements Comparable<Produto>{
     }
 
     public static void listAll(){
-        if(listaProdutos.size() == 0) System.out.println("Não há produtos cadastrados!");
+        if(listaProdutos.size() == 0) System.out.println("\033[1;31mNão há produtos cadastrados!\033[m");
         for(Produto p : listaProdutos){
             System.out.println(p.toString());
         }
@@ -55,7 +57,7 @@ public class Produto implements Comparable<Produto>{
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite a marca: ");
         String marca = sc.next();
-        if(listaProdutos.size() == 0) System.out.println("Não há produtos cadastrados!");
+        if(listaProdutos.size() == 0) System.out.println("\033[1;31mNão há produtos cadastrados!\033[m");
         for(Produto p : listaProdutos){
             if(p.marca.equals(marca)) System.out.println(p.toString());
         }
@@ -65,7 +67,7 @@ public class Produto implements Comparable<Produto>{
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite a marca: ");
         String marca = sc.next();
-        if(listaProdutos.size() == 0) System.out.println("Não há produtos cadastrados!");
+        if(listaProdutos.size() == 0) System.out.println("\033[1;31mNão há produtos cadastrados!\033[m");
         for(Produto p : listaProdutos){
             if(p.categoria.equals(marca)) System.out.println(p.toString());
         }
@@ -82,6 +84,7 @@ public class Produto implements Comparable<Produto>{
         System.out.println("Digite o id do produto que deseja remover: ");
         id = sc.nextInt();
         listaProdutos.removeIf(p -> p.getIdProduto() == id);
+        System.out.println("\033[1;32mProduto removido com sucesso!!\033[m");
     }
 
     public static void editar(){
@@ -115,5 +118,4 @@ public class Produto implements Comparable<Produto>{
         Collections.reverse(listaProdutos);
         listAll();
     }
-
 }

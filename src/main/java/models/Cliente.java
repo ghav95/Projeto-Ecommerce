@@ -12,11 +12,11 @@ import java.util.List;
 public class Cliente implements Pessoa<Cliente>{
     public static List<Cliente> listCliente = new ArrayList<>();
     int id;
-    String nome = "";
-    String login= "";
-    String senha = "";
-    String email = "";
-    String cpfcnpj = "";
+    String nome;
+    String login;
+    String senha;
+    String email;
+    String cpfcnpj;
 
     public Cliente(String nome, String login, String senha, String email, String cpfcnpj) {
         this.nome = nome;

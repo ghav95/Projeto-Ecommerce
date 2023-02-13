@@ -38,7 +38,7 @@ public class InicioCadastroPerfil {
             case 3 -> CadastrarAdministrador.cadastrar();
             case 4 -> Login.login();
             case 5 -> {
-                System.out.println("Finalizando sistema.");
+                System.out.println("\033[33mSaindo do sistema...\033[m");
                 System.exit(0); return false; }
         }
         return true;
