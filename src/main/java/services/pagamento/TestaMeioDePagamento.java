@@ -14,7 +14,7 @@ public class TestaMeioDePagamento {
 
         IGatewayDePagamento gatewayDePagamento = new SistemaDePagamentos(seletorDeFormaDePagamento, gerenciadorDeFormasDePagamento);
 
-        gatewayDePagamento.pagar(2000.00);
+        //gatewayDePagamento.pagar();
 
         System.out.println();
 

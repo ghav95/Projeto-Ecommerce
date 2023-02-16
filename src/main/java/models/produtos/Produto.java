@@ -65,11 +65,11 @@ public class Produto implements Comparable<Produto>{
 
     public static void listAllFilterByCategoria(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Digite a marca: ");
-        String marca = sc.next();
+        System.out.print("Digite a categoria: ");
+        String categoria = sc.next();
         if(listaProdutos.size() == 0) System.out.println("\033[1;31mNão há produtos cadastrados!\033[m");
         for(Produto p : listaProdutos){
-            if(p.categoria.equals(marca)) System.out.println(p.toString());
+            if(p.categoria.equals(categoria)) System.out.println(p.toString());
         }
     }
 

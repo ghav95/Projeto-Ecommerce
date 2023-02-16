@@ -1,15 +1,18 @@
 package services;
 
-import models.*;
+import models.usuarios.Administrador;
+import models.usuarios.Cliente;
+import models.usuarios.Usuario;
 
 import java.util.Scanner;
 
 public class Login {
+
     public static void login(){
         Scanner sc = new Scanner(System.in);
         String senha = "";
         int tentativas = 0;
-        Pessoa<?> usuario;
+        Usuario usuario;
         System.out.print("\033[34;7mDigite o seu login:\033[m ");
         usuario = isCadastrado(sc.next());
 
@@ -51,21 +54,21 @@ public class Login {
         }
     }
 
-    public static Pessoa<?> isCadastrado(String login)
+    public static Usuario isCadastrado(String login)
     {
-        Pessoa<?> p =  new Administrador().getByLogin(login);
-        if (p == null){
-            p = new Cliente().getByLogin(login);
+        Usuario usuario =  Administrador.getByLogin(login);
+        if (usuario == null){
+            usuario = Cliente.getByLogin(login);
         }
-        return p;
+        return usuario;
     }
 
-    public static boolean isAdministrador(Pessoa<?> p){
-        return p instanceof Administrador;
+    public static boolean isAdministrador(Usuario usuario){
+        return usuario instanceof Administrador;
     }
 
-    public static boolean isCliente(Pessoa<?> p){
-        return p instanceof Cliente;
+    public static boolean isCliente(Usuario usuario){
+        return usuario instanceof Cliente;
     }
 
 }

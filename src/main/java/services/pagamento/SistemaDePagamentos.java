@@ -17,4 +17,8 @@ public class SistemaDePagamentos implements IGatewayDePagamento {
         formaDePagamento.pagar(valorPagamento);
     }
 
+    @Override
+    public void pagar(IFormaDePagamento formaDePagamento, Double valorPagamento) {
+
+    }
 }

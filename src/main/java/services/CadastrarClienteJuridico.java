@@ -1,6 +1,6 @@
 package services;
 
-import models.ClientePessoaJuridica;
+import models.usuarios.ClientePessoaJuridica;
 import services.validadores.ValidarCNPJ;
 
 import java.util.Scanner;
@@ -8,29 +8,13 @@ import java.util.Scanner;
 public class CadastrarClienteJuridico {
 
     public static void cadastrar() {
-        String nome;
-        String login;
-        String senha;
-        String endereco;
-        String email;
-        String cpfcnpj;
+        String nome, login, senha, endereco, email, cpfcnpj;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o nome: ");
         nome = sc.next();
 
-        System.out.print("Digite o cnpj: ");
-        cpfcnpj = sc.next();
-        int tentativas = 0;
-        while (!ValidarCNPJ.isValido(cpfcnpj)) {
-            System.out.print("\033[1;31mCNPJ inválido!\033[m Digite novamente: ");
-            cpfcnpj = sc.next();
-            if (tentativas >= 3){
-                InicioCadastroPerfil.iniciar();
-                break;
-            }
-            tentativas++;
-        }
+        cpfcnpj = CadastrarCPFCNPJValido.getCPNJValido();
 
         System.out.print("Digite o login: ");
         login = sc.next();

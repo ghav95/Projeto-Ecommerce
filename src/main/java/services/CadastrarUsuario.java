@@ -1,25 +1,14 @@
 package services;
 
-import models.usuarios.Administrador;
+import models.usuarios.Cliente;
 import services.validadores.ValidarCPF;
 
 import java.util.Scanner;
 
-public class CadastrarAdministrador {
+public class CadastrarUsuario {
 
-    public static void cadastrar(){
 
-        if(cadastrarAdministrador()) {
-            System.out.println("\033[32mAdministrador cadastrado com sucesso!\033[m");
-            InicioAdministrador.iniciar();
-        } else {
-            System.out.println("\033[32mErro: Administrador não cadastrado!\033[m");
-            Login.login();
-        }
-
-    }
-
-    public static boolean cadastrarAdministrador(){
+    public static Cliente cadastrarCliente(){
         String nome, login, senha, endereco, email, cpfcnpj;
         Scanner sc = new Scanner(System.in);
 
@@ -40,9 +29,8 @@ public class CadastrarAdministrador {
         System.out.print("Digite o endereco: ");
         endereco = sc.next();
 
-        new Administrador(nome, login, senha, email, cpfcnpj);
-
-        return true;
+        return new Cliente(nome, login, senha, email, cpfcnpj);
     }
+
 
 }

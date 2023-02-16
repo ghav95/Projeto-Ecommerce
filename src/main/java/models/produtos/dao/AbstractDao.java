@@ -13,9 +13,7 @@ public class AbstractDao<T, K> implements Dao<T, K>{
     }
 
     @Override
-    public void update(T objectDao) {
-
-    }
+    public void update(T objectDao) { }
 
     @Override
     public boolean delete(K id) {
