@@ -9,7 +9,8 @@ public class PagamentoQrCodePix implements IFormaDePagamento {
     }
 
     @Override
-    public boolean analisarFraude(Double valorPagamento) {
+    public boolean analisarFraude(Double valorPagamento)
+    {
         return (valorPagamento < 1000.0);
     }
 }

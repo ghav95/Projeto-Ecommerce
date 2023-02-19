@@ -2,17 +2,34 @@ package services.validadores;
 
 import java.util.InputMismatchException;
 
+/***
+ * Author: devmedia
+ * Source: https://www.devmedia.com.br/validando-o-cnpj-em-uma-aplicacao-java/22374
+ */
+
 public class ValidarCNPJ {
 
     public static boolean isValido(String cnpj) {
 
-        if (cnpj.equals("00000000000000") || cnpj.equals("11111111111111") || cnpj.equals("22222222222222") || cnpj.equals("33333333333333") || cnpj.equals("44444444444444") || cnpj.equals("55555555555555") || cnpj.equals("66666666666666") || cnpj.equals("77777777777777") || cnpj.equals("88888888888888") || cnpj.equals("99999999999999") || (cnpj.length() != 14))
-            return (false);
+        if (
+               cnpj.equals("00000000000000")
+            || cnpj.equals("11111111111111")
+            || cnpj.equals("22222222222222")
+            || cnpj.equals("33333333333333")
+            || cnpj.equals("44444444444444")
+            || cnpj.equals("55555555555555")
+            || cnpj.equals("66666666666666")
+            || cnpj.equals("77777777777777")
+            || cnpj.equals("88888888888888")
+            || cnpj.equals("99999999999999")
+            || (cnpj.length() != 14)
+           ) return (false);
 
         char dig13, dig14;
         int sm, i, r, num, peso;
 
-        try {
+        try
+        {
             // Calculo do 1o. Digito Verificador
             sm = 0;
             peso = 2;
@@ -51,11 +68,10 @@ public class ValidarCNPJ {
                 dig14 = (char) ((11 - r) + 48);
 
             // Verifica se os dígitos calculados conferem com os dígitos informados.
-            if ((dig13 == cnpj.charAt(12)) && (dig14 == cnpj.charAt(13)))
-                return (true);
-            else
-                return (false);
-        } catch (InputMismatchException erro) {
+            return (dig13 == cnpj.charAt(12)) && (dig14 == cnpj.charAt(13));
+        }
+        catch (InputMismatchException erro)
+        {
             return (false);
         }
     }

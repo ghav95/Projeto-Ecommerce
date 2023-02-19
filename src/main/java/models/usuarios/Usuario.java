@@ -16,8 +16,7 @@ public class Usuario implements Pessoa{
     String nome, login, senha, email, cpfcnpj;
 
     Usuario() {
-        listUsuario.add(this);
-        this.id = listUsuario.indexOf(this);
+
     }
 
     public Usuario(String nome, String login, String senha, String email, String cpfcnpj) {
@@ -26,6 +25,8 @@ public class Usuario implements Pessoa{
         this.senha = senha;
         this.email = email;
         this.cpfcnpj = cpfcnpj;
+        listUsuario.add(this);
+        this.id = listUsuario.indexOf(this);
     }
 
     public static Usuario getById(int id) {

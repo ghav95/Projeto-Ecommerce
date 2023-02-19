@@ -1,20 +1,19 @@
 package models.produtos;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Builder;
 
-@Setter
-@Getter
+@Builder
+
 public class Informatica extends Produto {
-    public Informatica( String nome, Double preco, String categoria, String marca) {
-        super( nome, preco, categoria, marca);
+    private String serial;
+
+    public Informatica(String nome, Double preco, String categoria, String marca, String serial) {
+        super(nome, preco, categoria, marca);
+        generateSerial(this);
     }
 
-    public enum Categoria{
-      CELULAR,
-      ACESSORIOS,
-      NOTEBOOK,
-      PC_GAMER
-  };
+    private void generateSerial(Informatica informatica){
+        this.serial = "pokpaodkdeapdak";
+    }
 
 }
